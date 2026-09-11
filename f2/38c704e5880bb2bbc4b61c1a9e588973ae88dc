@@ -1,0 +1,61 @@
+.gitignore
+  s_eb707889f7b962::t_39103bcd04ce94 32-40
+pocs/tui-prod-manager-macos/assets/Caveat-OFL.txt
+  s_4d011000ea186e::t_29a801e1f5871a 1-93
+pocs/tui-prod-manager-macos/assets/architecture.html
+  s_4d011000ea186e::t_78220cbd84431d 1
+pocs/tui-prod-manager-macos/assets/architecture.svg
+  s_4d011000ea186e::t_62e7162459c5bb 1-12
+pocs/tui-prod-manager-macos/assets/logo.svg
+  s_4d011000ea186e::t_cafc0f263b6340 1
+pocs/tui-prod-manager-macos/go.mod
+  s_4d011000ea186e::t_8a17c31cad1bbb 1-21
+pocs/tui-prod-manager-macos/go.sum
+  s_4d011000ea186e::t_7b2d7580964faf 1-50
+pocs/tui-prod-manager-macos/scripts/common.sh
+  s_4d011000ea186e::t_4971884157ef04 1-11
+pocs/tui-prod-manager-macos/scripts/install.sh
+  s_4d011000ea186e::t_e4c55d405781b0 1-8
+pocs/tui-prod-manager-macos/scripts/setup.sh
+  s_4d011000ea186e::t_ff46e871670589 1-13
+pocs/tui-prod-manager-macos/scripts/start-all.sh
+  s_4d011000ea186e::t_5b223a9a2013df 1-10
+pocs/tui-prod-manager-macos/scripts/status.sh
+  s_4d011000ea186e::t_75d4fee1350cb5 1-8
+pocs/tui-prod-manager-macos/scripts/stop-all.sh
+  s_4d011000ea186e::t_53aa68de6786a8 1-8
+pocs/tui-prod-manager-macos/scripts/test-all.sh
+  s_4d011000ea186e::t_93a0c0a97f111d 1-9
+pocs/tui-prod-manager-macos/scripts/ui.sh
+  s_4d011000ea186e::t_7b53367e881bc9 1-5
+pocs/tui-prod-manager-macos/scripts/uninstall.sh
+  s_4d011000ea186e::t_c55d18f150cc1d 1-10
+pocs/tui-prod-manager-macos/src/lifecycle.go
+  s_4d011000ea186e::t_1de9af9716f73f 1-101
+pocs/tui-prod-manager-macos/src/main.go
+  s_4d011000ea186e::t_166b426634ccdb 1-88
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "f238c704e5880bb2bbc4b61c1a9e588973ae88dc",
+  "prompts": {},
+  "sessions": {
+    "s_4d011000ea186e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a091cb-cc7c-7c42-af88-f858f4ec46d3",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "diegopacheco <diego.pacheco.it@gmail.com>"
+    },
+    "s_eb707889f7b962": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d7478bb0-d7be-46d9-970a-60ab61b7e476",
+        "model": "claude-opus-5"
+      },
+      "human_author": "diegopacheco <diego.pacheco.it@gmail.com>"
+    }
+  }
+}
