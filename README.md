@@ -1,2 +1,2 @@
-# golang-playground
-golang-playground: Go POCs
+# go-playground
+GO lang POCs and Code

@@ -1,0 +1,5 @@
+dbos-app
+*.exe
+*.test
+*.out
+go.work
