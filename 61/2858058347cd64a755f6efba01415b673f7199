@@ -1,0 +1,109 @@
+pocs/tui-chess/internal/ui/sprites.go
+  s_62ec60c877c1d6::t_e33935e60b9269 1-10,13-14,16-50
+  s_62ec60c877c1d6::t_4feb46cf119c65 11-12,15
+pocs/tui-chess/internal/chess/square.go
+  s_62ec60c877c1d6::t_971243f9142868 1-39
+pocs/tui-chess/internal/chess/movegen.go
+  s_62ec60c877c1d6::t_218d7646420a31 1-185
+pocs/tui-chess/internal/engine/search.go
+  s_62ec60c877c1d6::t_1e30be986d8d71 1-101
+pocs/tui-chess/internal/chess/san.go
+  s_62ec60c877c1d6::t_7f2edd7c618107 1-65
+pocs/tui-chess/internal/ui/capture.go
+  s_62ec60c877c1d6::t_bb11001bcb6c98 1-57,61,63-167
+  s_62ec60c877c1d6::t_1596ee751f1a2c 58-60,62
+pocs/tui-chess/scripts/printscreens.sh
+  s_62ec60c877c1d6::t_aa01b7e464807d 1-21
+pocs/tui-chess/scripts/setup.sh
+  s_62ec60c877c1d6::t_aa01b7e464807d 1-9
+pocs/tui-chess/internal/engine/engine_test.go
+  s_62ec60c877c1d6::t_2e81378fc8df56 1-98
+pocs/tui-chess/internal/ui/board.go
+  s_62ec60c877c1d6::t_0c2010391e4647 1-62
+pocs/tui-chess/internal/theme/theme.go
+  s_62ec60c877c1d6::t_3828256f1e65cd 1-21,23-34
+  s_62ec60c877c1d6::t_f552ec3498fafe 22
+pocs/tui-chess/internal/engine/eval.go
+  s_62ec60c877c1d6::t_ec8559edac0ab7 1-123
+pocs/tui-chess/internal/ui/panel.go
+  s_62ec60c877c1d6::t_c1ba39dc9519af 1-91,94-122
+  s_62ec60c877c1d6::t_4feb46cf119c65 92-93
+pocs/tui-chess/scripts/test-all.sh
+  s_62ec60c877c1d6::t_aa01b7e464807d 1-25
+pocs/tui-chess/internal/ui/app.go
+  s_62ec60c877c1d6::t_ed205a8f53d1f9 5,154-157,159,211,213,215,217,220,222,238,360-363
+  s_62ec60c877c1d6::t_4e636e0f219347 1-4,6-153,158,160-210,212,214,216,218-219,221,223-237,239-359,364-375
+pocs/tui-chess/internal/chess/fen.go
+  s_62ec60c877c1d6::t_3d113ffc3a0294 1-141
+pocs/tui-chess/internal/ui/layout.go
+  s_62ec60c877c1d6::t_e4157698fb5af7 1-62
+pocs/tui-chess/internal/ui/menu.go
+  s_62ec60c877c1d6::t_9a9d7fb5760711 1-3,6-114,116-117
+  s_62ec60c877c1d6::t_3b7f77fd0dea1d 4-5,115
+pocs/tui-chess/internal/ui/overlay.go
+  s_62ec60c877c1d6::t_6d6acf8f4f909e 1-82
+pocs/tui-chess/internal/chess/move.go
+  s_62ec60c877c1d6::t_4cb280dd708bf9 1-43
+pocs/tui-chess/.gitignore
+  s_62ec60c877c1d6::t_aa01b7e464807d 1-2
+pocs/tui-chess/scripts/uninstall-macos.sh
+  s_62ec60c877c1d6::t_aa01b7e464807d 1-16
+pocs/tui-chess/scripts/install-macos.sh
+  s_62ec60c877c1d6::t_aa01b7e464807d 1-41
+pocs/tui-chess/assets/architecture.svg
+  s_62ec60c877c1d6::t_fccb7c5a5d6e63 1-81
+pocs/tui-chess/assets/logo.svg
+  s_62ec60c877c1d6::t_fccb7c5a5d6e63 1-13,16-19
+  s_62ec60c877c1d6::t_7776e46db4eb23 14-15
+pocs/tui-chess/internal/chess/piece.go
+  s_62ec60c877c1d6::t_bb3466fef6a0d9 1-57
+pocs/tui-chess/internal/chess/game.go
+  s_62ec60c877c1d6::t_34e0b9f01c9fc0 1-5,7-72,75,80-94,99,102-135,137-138
+  s_62ec60c877c1d6::t_b31ec36e0a4809 6,73-74,76-79,136
+  s_62ec60c877c1d6::t_bb29097c49bc0b 95-98,100-101
+pocs/tui-chess/main.go
+  s_62ec60c877c1d6::t_e05523d963dc8c 1-30
+pocs/tui-chess/internal/chess/game_test.go
+  s_62ec60c877c1d6::t_52f513bb5cbf74 74-75
+  s_62ec60c877c1d6::t_2519f1179e87ae 1-73,76-147,149-171,174-212
+  s_62ec60c877c1d6::t_b31ec36e0a4809 148,172-173
+pocs/tui-chess/internal/ui/draw.go
+  s_62ec60c877c1d6::t_182eb9ebe2f4a6 1-72
+pocs/tui-chess/go.mod
+  s_62ec60c877c1d6::t_0f6948d59969a3 1-3
+  s_62ec60c877c1d6::t_f552ec3498fafe 4-12
+  s_62ec60c877c1d6::t_7bb1b325bf8471 13-14
+pocs/tui-chess/README.md
+  s_62ec60c877c1d6::t_ce81c8f2125acf 1-77,79-113,116,118-176
+  s_62ec60c877c1d6::t_cb1f768beb3b2b 78,114-115,117
+  s_62ec60c877c1d6::t_e442546482b996 177-195
+pocs/tui-chess/scripts/common.sh
+  s_62ec60c877c1d6::t_e442546482b996 25
+  s_62ec60c877c1d6::t_aa01b7e464807d 1-24,26-28
+pocs/tui-chess/internal/chess/perft_test.go
+  s_62ec60c877c1d6::t_51ca59760c4065 1-45
+pocs/tui-chess/internal/ui/ui_test.go
+  s_62ec60c877c1d6::t_a894eb3f6eea66 4-5,163-166,173,179-181
+  s_62ec60c877c1d6::t_6630dca2424654 49
+  s_62ec60c877c1d6::t_125ac376d9f619 1-3,6-48,50-162,167-172,174-178,182-184
+pocs/tui-chess/internal/chess/position.go
+  s_62ec60c877c1d6::t_7f3e20373d34f2 1-128
+pocs/tui-chess/go.sum
+  s_62ec60c877c1d6::t_a5363042491986 1-45
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "612858058347cd64a755f6efba01415b673f7199",
+  "prompts": {},
+  "sessions": {
+    "s_62ec60c877c1d6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8c3d7873-7e57-438d-991f-91ee8ed5fa8b",
+        "model": "claude-opus-5"
+      },
+      "human_author": "diegopacheco <diego.pacheco.it@gmail.com>"
+    }
+  }
+}
