@@ -1,0 +1,19 @@
+README.md
+  s_535e754ea9c56b::t_e88fc644e60b1d 2-239
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "54965f37b9533cb3f39705c34c729a50c0c43260",
+  "prompts": {},
+  "sessions": {
+    "s_535e754ea9c56b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3ec0f128-13e7-42d7-b567-ffe31fd1eaaa",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "diegopacheco <diego.pacheco.it@gmail.com>"
+    }
+  }
+}
