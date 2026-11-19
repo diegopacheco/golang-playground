@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Small Biz Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span class="mark">SB</span><span>Small Biz</span></div>
+    <nav>
+      <button class="tab active" data-tab="sales">Sales</button>
+      <button class="tab" data-tab="employees">Employees</button>
+      <button class="tab" data-tab="receipts">Receipts</button>
+      <button class="tab" data-tab="invoices">Invoices</button>
+    </nav>
+    <div class="stats" id="stats"></div>
+  </aside>
+
+  <main>
+    <div id="toast" class="toast hidden"></div>
+
+    <section id="sales" class="panel">
+      <header><h1>Sales</h1><p>Register a sale, then issue a receipt or an invoice for it.</p></header>
+      <form id="sale-form" class="card">
+        <div class="row">
+          <label>Employee<select name="employeeId" required></select></label>
+          <label>Customer<input name="customer" required placeholder="Acme Corp"></label>
+        </div>
+        <div id="items"></div>
+        <div class="row actions">
+          <button type="button" id="add-item" class="ghost">+ Add item</button>
+          <span class="total">Total <strong id="sale-total">$0.00</strong></span>
+          <button type="submit">Save sale</button>
+        </div>
+      </form>
+      <table class="card">
+        <thead><tr><th>#</th><th>Date</th><th>Customer</th><th>Employee</th><th>Items</th><th class="num">Total</th><th></th></tr></thead>
+        <tbody id="sales-body"></tbody>
+      </table>
+    </section>
+
+    <section id="employees" class="panel hidden">
+      <header><h1>Employees</h1><p>People who make the sales.</p></header>
+      <form id="employee-form" class="card">
+        <input type="hidden" name="id">
+        <div class="row">
+          <label>Name<input name="name" required></label>
+          <label>Email<input name="email" type="email" required></label>
+          <label>Role<input name="role" required placeholder="Sales Rep"></label>
+          <button type="submit" id="employee-submit">Add employee</button>
+          <button type="button" id="employee-cancel" class="ghost hidden">Cancel</button>
+        </div>
+      </form>
+      <table class="card">
+        <thead><tr><th>#</th><th>Name</th><th>Email</th><th>Role</th><th>Since</th><th></th></tr></thead>
+        <tbody id="employees-body"></tbody>
+      </table>
+    </section>
+
+    <section id="receipts" class="panel hidden">
+      <header><h1>Receipts</h1><p>Proof of payment issued for paid sales.</p></header>
+      <table class="card">
+        <thead><tr><th>Number</th><th>Sale</th><th>Customer</th><th>Method</th><th>Issued</th><th class="num">Amount</th></tr></thead>
+        <tbody id="receipts-body"></tbody>
+      </table>
+    </section>
+
+    <section id="invoices" class="panel hidden">
+      <header><h1>Invoices</h1><p>Bills for sales paid later. Open invoices can be paid or voided.</p></header>
+      <table class="card">
+        <thead><tr><th>Number</th><th>Sale</th><th>Customer</th><th>Issued</th><th>Due</th><th>Status</th><th class="num">Amount</th><th></th></tr></thead>
+        <tbody id="invoices-body"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <dialog id="doc-dialog">
+    <form method="dialog" id="doc-form">
+      <h2 id="doc-title"></h2>
+      <input type="hidden" name="saleId">
+      <input type="hidden" name="kind">
+      <label id="method-field">Payment method
+        <select name="method"><option>CASH</option><option>CARD</option><option>TRANSFER</option></select>
+      </label>
+      <label id="due-field">Due in days<input name="dueDays" type="number" min="1" max="90" value="30"></label>
+      <div class="row actions">
+        <button type="button" class="ghost" id="doc-cancel">Cancel</button>
+        <button type="submit">Issue</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
