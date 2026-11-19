@@ -2,6 +2,17 @@
 
 A small business desktop app built with Go and [Wails](https://wails.io). It manages **employees**, **sales**, **sales receipts** and **invoices**, keeps everything in a local **SQLite** database, and exposes the same features as a **REST API**.
 
+## Wails: Electron for Go
+
+Wails builds native desktop apps in Go. The UI is HTML, CSS and JS rendered by the operating system's built-in WebView: WKWebView on macOS, WebView2 on Windows, WebKitGTK on Linux. Think of it as Electron with Go in place of Node.js, but lighter.
+
+| | Wails | Electron |
+|---|---|---|
+| Backend language | Go, compiled, same process | Node.js |
+| UI | HTML/CSS/JS in the system WebView | HTML/CSS/JS in bundled Chromium |
+| App size | a few MB | 100+ MB |
+| Rendering | can differ slightly per OS | identical everywhere |
+
 ## How it Works
 
 1. `main.go` opens the SQLite database, runs the schema migration and wires stores, services and the HTTP router.
