@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&amp;display=swap'); text{font-family:'Caveat',cursive;fill:#1e2235}</style>
+    <filter id="wobble"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" seed="7"/><feDisplacementMap in="SourceGraphic" scale="4"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#3b4060"/></marker>
+  </defs>
+  <rect width="1400" height="820" fill="#fdfcf7"/>
+  <text x="700" y="56" font-size="48" font-weight="700" text-anchor="middle">badger-fun architecture</text>
+
+  <g filter="url(#wobble)" stroke="#3b4060" stroke-width="2.5">
+    <rect x="480" y="96" width="440" height="114" rx="16" fill="#fff9c4"/>
+    <rect x="60" y="290" width="380" height="190" rx="16" fill="#fce4ec"/>
+    <rect x="510" y="290" width="380" height="190" rx="16" fill="#fff3e0"/>
+    <rect x="960" y="290" width="380" height="190" rx="16" fill="#e0f7fa"/>
+    <rect x="60" y="560" width="1280" height="220" rx="18" fill="#e3f2fd"/>
+    <rect x="100" y="620" width="560" height="134" rx="14" fill="#ede7f6"/>
+    <rect x="740" y="620" width="560" height="134" rx="14" fill="#e8f5e9"/>
+  </g>
+
+  <g stroke="#3b4060" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <path d="M560 210 L270 286"/>
+    <path d="M700 210 L700 286"/>
+    <path d="M840 210 L1130 286"/>
+    <path d="M250 480 L250 616"/>
+    <path d="M700 480 L560 616"/>
+    <path d="M1150 480 L1020 616"/>
+  </g>
+
+  <text x="700" y="142" font-size="34" font-weight="700" text-anchor="middle">main.go</text>
+  <text x="700" y="180" font-size="24" text-anchor="middle">-dir .run · -keys · -value-size · -overwrites</text>
+
+  <text x="250" y="332" font-size="31" font-weight="700" text-anchor="middle">internal/ttl</text>
+  <text x="250" y="370" font-size="23" text-anchor="middle">NewEntry(k, v).WithTTL(d)</text>
+  <text x="250" y="402" font-size="23" text-anchor="middle">read before expiry: value</text>
+  <text x="250" y="434" font-size="23" text-anchor="middle">read after expiry: not found</text>
+
+  <text x="700" y="332" font-size="31" font-weight="700" text-anchor="middle">internal/txn</text>
+  <text x="700" y="370" font-size="23" text-anchor="middle">two txns read + write one key</text>
+  <text x="700" y="402" font-size="23" text-anchor="middle">first Commit: ok</text>
+  <text x="700" y="434" font-size="23" text-anchor="middle">second Commit: ErrConflict → retry</text>
+
+  <text x="1150" y="332" font-size="31" font-weight="700" text-anchor="middle">internal/vloggc</text>
+  <text x="1150" y="370" font-size="23" text-anchor="middle">16 KiB values written 4 times</text>
+  <text x="1150" y="402" font-size="23" text-anchor="middle">delete every 2nd key · Flatten</text>
+  <text x="1150" y="434" font-size="23" text-anchor="middle">RunValueLogGC until ErrNoRewrite</text>
+
+  <text x="262" y="540" font-size="23">SetEntry · Get</text>
+  <text x="615" y="540" font-size="23" text-anchor="end">NewTransaction</text>
+  <text x="1130" y="540" font-size="23">WriteBatch · GC</text>
+
+  <text x="1316" y="600" font-size="30" font-weight="700" text-anchor="end">dgraph-io/badger v4</text>
+  <text x="380" y="662" font-size="28" font-weight="700" text-anchor="middle">LSM tree (*.sst)</text>
+  <text x="380" y="698" font-size="23" text-anchor="middle">keys + expiry + value pointers</text>
+  <text x="380" y="730" font-size="23" text-anchor="middle">compaction records discard stats</text>
+  <text x="1020" y="662" font-size="28" font-weight="700" text-anchor="middle">value log (*.vlog)</text>
+  <text x="1020" y="698" font-size="23" text-anchor="middle">values above the 1 KiB threshold</text>
+  <text x="1020" y="730" font-size="23" text-anchor="middle">GC rewrites live values, drops file</text>
+</svg>
