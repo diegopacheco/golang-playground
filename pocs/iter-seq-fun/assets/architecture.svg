@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="960" viewBox="0 0 1400 960">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&amp;display=swap'); text{font-family:'Caveat',cursive;fill:#1e2235}</style>
+    <filter id="wobble"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" seed="7"/><feDisplacementMap in="SourceGraphic" scale="4"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#3b4060"/></marker>
+  </defs>
+  <rect width="1400" height="960" fill="#fdfcf7"/>
+  <text x="700" y="56" font-size="48" font-weight="700" text-anchor="middle">iter-seq-fun architecture</text>
+
+  <g filter="url(#wobble)" stroke="#3b4060" stroke-width="2.5">
+    <rect x="120" y="100" width="400" height="110" rx="16" fill="#fff9c4"/>
+    <rect x="880" y="100" width="400" height="110" rx="16" fill="#fff9c4"/>
+    <rect x="120" y="300" width="400" height="120" rx="16" fill="#fce4ec"/>
+    <rect x="880" y="300" width="400" height="120" rx="16" fill="#e0f7fa"/>
+    <rect x="40" y="510" width="1320" height="200" rx="18" fill="#e3f2fd"/>
+    <rect x="80" y="570" width="260" height="110" rx="14" fill="#fff3e0"/>
+    <rect x="410" y="570" width="260" height="110" rx="14" fill="#fff3e0"/>
+    <rect x="740" y="570" width="260" height="110" rx="14" fill="#fff3e0"/>
+    <rect x="1070" y="570" width="260" height="110" rx="14" fill="#ede7f6"/>
+    <rect x="400" y="800" width="600" height="120" rx="18" fill="#e8f5e9"/>
+  </g>
+
+  <g stroke="#3b4060" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <path d="M320 210 L320 296"/>
+    <path d="M1080 210 L1080 296"/>
+    <path d="M320 420 L320 566"/>
+    <path d="M1080 420 L1080 506"/>
+    <path d="M340 625 L406 625"/>
+    <path d="M670 625 L736 625"/>
+    <path d="M1000 625 L1066 625"/>
+    <path d="M1200 710 L1000 830"/>
+  </g>
+
+  <text x="320" y="146" font-size="32" font-weight="700" text-anchor="middle">data/app.log</text>
+  <text x="320" y="184" font-size="23" text-anchor="middle">40 lines · INFO · WARN · ERROR</text>
+  <text x="1080" y="146" font-size="32" font-weight="700" text-anchor="middle">internal/catalog</text>
+  <text x="1080" y="184" font-size="23" text-anchor="middle">Store: 200 products, pages of 10</text>
+
+  <text x="332" y="262" font-size="23">io.Reader</text>
+  <text x="1092" y="262" font-size="23">Fetch(ctx, cursor)</text>
+
+  <text x="320" y="346" font-size="32" font-weight="700" text-anchor="middle">internal/lines</text>
+  <text x="320" y="382" font-size="23" text-anchor="middle">Source.All(ctx) iter.Seq[string]</text>
+  <text x="320" y="408" font-size="23" text-anchor="middle">Consumed() · Err()</text>
+  <text x="1080" y="346" font-size="32" font-weight="700" text-anchor="middle">internal/pages</text>
+  <text x="1080" y="382" font-size="23" text-anchor="middle">Paginator[T].All(ctx) iter.Seq[T]</text>
+  <text x="1080" y="408" font-size="23" text-anchor="middle">Fetcher[T] interface · Fetched() · Err()</text>
+
+  <text x="332" y="470" font-size="23">iter.Seq[string]</text>
+  <text x="1092" y="470" font-size="23">iter.Seq[Product]</text>
+
+  <text x="1330" y="550" font-size="32" font-weight="700" text-anchor="end">internal/seq</text>
+  <text x="210" y="612" font-size="30" font-weight="700" text-anchor="middle">Filter</text>
+  <text x="210" y="650" font-size="23" text-anchor="middle">keep(v) bool</text>
+  <text x="540" y="612" font-size="30" font-weight="700" text-anchor="middle">Map</text>
+  <text x="540" y="650" font-size="23" text-anchor="middle">f(A) B</text>
+  <text x="870" y="612" font-size="30" font-weight="700" text-anchor="middle">Take</text>
+  <text x="870" y="650" font-size="23" text-anchor="middle">stop after n</text>
+  <text x="1200" y="612" font-size="30" font-weight="700" text-anchor="middle">Zip</text>
+  <text x="1200" y="650" font-size="23" text-anchor="middle">iter.Pull · From(1)</text>
+
+  <text x="1130" y="790" font-size="23">iter.Seq2[int, T]</text>
+
+  <text x="700" y="846" font-size="32" font-weight="700" text-anchor="middle">main.go</text>
+  <text x="700" y="882" font-size="23" text-anchor="middle">flags · builds both pipelines · range pulls values</text>
+  <text x="700" y="908" font-size="23" text-anchor="middle">prints lines read and pages fetched to stdout</text>
+</svg>
