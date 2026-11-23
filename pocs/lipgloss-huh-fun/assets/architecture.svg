@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&amp;display=swap'); text{font-family:'Caveat',cursive;fill:#1e2235}</style>
+    <filter id="wobble"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" seed="7"/><feDisplacementMap in="SourceGraphic" scale="4"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#3b4060"/></marker>
+  </defs>
+  <rect width="1400" height="900" fill="#fdfcf7"/>
+  <text x="700" y="56" font-size="48" font-weight="700" text-anchor="middle">projwiz architecture</text>
+
+  <g filter="url(#wobble)" stroke="#3b4060" stroke-width="2.5">
+    <rect x="120" y="90" width="360" height="100" rx="16" fill="#fff9c4"/>
+    <rect x="920" y="90" width="360" height="100" rx="16" fill="#fff9c4"/>
+    <rect x="380" y="260" width="440" height="110" rx="16" fill="#e3f2fd"/>
+    <rect x="960" y="260" width="380" height="110" rx="16" fill="#e0f7fa"/>
+    <rect x="60" y="450" width="370" height="160" rx="16" fill="#fce4ec"/>
+    <rect x="515" y="450" width="370" height="160" rx="16" fill="#fff3e0"/>
+    <rect x="970" y="450" width="370" height="160" rx="16" fill="#ede7f6"/>
+    <rect x="400" y="700" width="600" height="160" rx="18" fill="#e8f5e9"/>
+  </g>
+
+  <g stroke="#3b4060" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <path d="M300 190 L520 256"/>
+    <path d="M1020 190 L740 256"/>
+    <path d="M820 315 L956 315"/>
+    <path d="M460 370 L260 446"/>
+    <path d="M600 370 L640 446"/>
+    <path d="M760 370 L1100 446"/>
+    <path d="M515 530 L434 530"/>
+    <path d="M885 530 L966 530"/>
+    <path d="M245 610 L470 696"/>
+    <path d="M1155 610 L930 696"/>
+  </g>
+
+  <text x="300" y="134" font-size="32" font-weight="700" text-anchor="middle">Terminal user</text>
+  <text x="300" y="170" font-size="24" text-anchor="middle">keys · arrows · space · enter</text>
+  <text x="1100" y="134" font-size="32" font-weight="700" text-anchor="middle">Scripts / CI</text>
+  <text x="1100" y="170" font-size="24" text-anchor="middle">-name -stack -features -out</text>
+
+  <text x="600" y="304" font-size="32" font-weight="700" text-anchor="middle">main.go</text>
+  <text x="600" y="340" font-size="23" text-anchor="middle">-name set → flags · else wizard · -capture</text>
+  <text x="1150" y="304" font-size="30" font-weight="700" text-anchor="middle">internal/ansihtml</text>
+  <text x="1150" y="340" font-size="23" text-anchor="middle">ANSI SGR → HTML → Playwright PNG</text>
+
+  <text x="245" y="494" font-size="30" font-weight="700" text-anchor="middle">internal/wizard</text>
+  <text x="245" y="530" font-size="23" text-anchor="middle">huh form, 4 groups</text>
+  <text x="245" y="562" font-size="23" text-anchor="middle">input · select · multi-select</text>
+  <text x="245" y="594" font-size="23" text-anchor="middle">confirm with live preview</text>
+  <text x="700" y="494" font-size="30" font-weight="700" text-anchor="middle">internal/shots</text>
+  <text x="700" y="530" font-size="23" text-anchor="middle">scripted key presses</text>
+  <text x="700" y="562" font-size="23" text-anchor="middle">drive the real form</text>
+  <text x="700" y="594" font-size="23" text-anchor="middle">snapshot View() per step</text>
+  <text x="1155" y="494" font-size="30" font-weight="700" text-anchor="middle">internal/card</text>
+  <text x="1155" y="530" font-size="23" text-anchor="middle">lipgloss summary card</text>
+  <text x="1155" y="562" font-size="23" text-anchor="middle">feature badges</text>
+  <text x="1155" y="594" font-size="23" text-anchor="middle">error card for bad flags</text>
+
+  <text x="700" y="744" font-size="32" font-weight="700" text-anchor="middle">internal/config  (domain, no UI imports)</text>
+  <text x="700" y="782" font-size="24" text-anchor="middle">Config · Stack · Feature typed values</text>
+  <text x="700" y="814" font-size="24" text-anchor="middle">ValidateName · ParseStack · ParseFeatures · Parse</text>
+  <text x="700" y="846" font-size="24" text-anchor="middle">sentinel errors joined so every problem shows at once</text>
+  <text x="300" y="672" font-size="22">validators</text>
+  <text x="1080" y="672" font-size="22">Validate</text>
+</svg>
