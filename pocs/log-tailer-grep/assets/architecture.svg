@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="860" viewBox="0 0 1400 860">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&amp;display=swap'); text{font-family:'Caveat',cursive;fill:#1e2235}</style>
+    <filter id="wobble"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" seed="11"/><feDisplacementMap in="SourceGraphic" scale="4"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#3b4060"/></marker>
+  </defs>
+  <rect width="1400" height="860" fill="#fdfcf7"/>
+  <text x="700" y="56" font-size="48" font-weight="700" text-anchor="middle">log-tailer-grep architecture</text>
+
+  <g filter="url(#wobble)" stroke="#3b4060" stroke-width="2.5">
+    <rect x="60" y="100" width="340" height="120" rx="16" fill="#fff9c4"/>
+    <rect x="530" y="100" width="340" height="120" rx="16" fill="#fff9c4"/>
+    <rect x="1000" y="100" width="340" height="120" rx="16" fill="#ede7f6"/>
+
+    <rect x="60" y="300" width="340" height="170" rx="16" fill="#e0f7fa"/>
+    <rect x="60" y="520" width="340" height="170" rx="16" fill="#e0f7fa"/>
+
+    <rect x="530" y="300" width="340" height="390" rx="16" fill="#e3f2fd"/>
+
+    <rect x="1000" y="300" width="340" height="170" rx="16" fill="#fce4ec"/>
+    <rect x="1000" y="520" width="340" height="170" rx="16" fill="#e8f5e9"/>
+
+    <rect x="530" y="740" width="340" height="90" rx="16" fill="#fff3e0"/>
+  </g>
+
+  <g stroke="#3b4060" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <path d="M1000 160 L874 160"/>
+    <path d="M700 220 L700 296"/>
+    <path d="M230 220 L230 296"/>
+    <path d="M400 385 L526 420"/>
+    <path d="M400 605 L526 570"/>
+    <path d="M870 385 L996 385"/>
+    <path d="M870 605 L996 605"/>
+    <path d="M700 690 L700 736"/>
+    <path d="M60 200 L30 200 L30 605 L56 605"/>
+  </g>
+
+  <text x="230" y="150" font-size="34" font-weight="700" text-anchor="middle">log files</text>
+  <text x="230" y="188" font-size="25" text-anchor="middle">grow · truncate · rotate</text>
+  <text x="700" y="150" font-size="34" font-weight="700" text-anchor="middle">main.go</text>
+  <text x="700" y="188" font-size="25" text-anchor="middle">config.Parse · NotifyContext</text>
+  <text x="1170" y="150" font-size="34" font-weight="700" text-anchor="middle">Ctrl-C / -for</text>
+  <text x="1170" y="188" font-size="25" text-anchor="middle">cancels the ctx</text>
+
+  <text x="230" y="345" font-size="30" font-weight="700" text-anchor="middle">tail.Follow (file 1)</text>
+  <text x="230" y="385" font-size="23" text-anchor="middle">poll ticker · read to EOF</text>
+  <text x="230" y="417" font-size="23" text-anchor="middle">size &lt; offset → seek 0</text>
+  <text x="230" y="449" font-size="23" text-anchor="middle">!os.SameFile → reopen</text>
+  <text x="230" y="565" font-size="30" font-weight="700" text-anchor="middle">tail.Follow (file N)</text>
+  <text x="230" y="605" font-size="23" text-anchor="middle">one goroutine per file</text>
+  <text x="230" y="637" font-size="23" text-anchor="middle">exits on ctx.Done</text>
+  <text x="230" y="669" font-size="23" text-anchor="middle">sends Line{File, Text}</text>
+
+  <text x="700" y="345" font-size="32" font-weight="700" text-anchor="middle">app.Run printer loop</text>
+  <text x="700" y="395" font-size="24" text-anchor="middle">select on lines · stats ticker</text>
+  <text x="700" y="430" font-size="24" text-anchor="middle">errors · ctx.Done</text>
+  <text x="700" y="480" font-size="24" text-anchor="middle">single goroutine owns</text>
+  <text x="700" y="515" font-size="24" text-anchor="middle">matcher + counters</text>
+  <text x="700" y="565" font-size="24" text-anchor="middle">on exit: cancel → wg.Wait</text>
+  <text x="700" y="600" font-size="24" text-anchor="middle">→ final counters</text>
+
+  <text x="1170" y="345" font-size="30" font-weight="700" text-anchor="middle">match.Matcher</text>
+  <text x="1170" y="385" font-size="23" text-anchor="middle">regexp per -e flag</text>
+  <text x="1170" y="417" font-size="23" text-anchor="middle">one ANSI color per pattern</text>
+  <text x="1170" y="449" font-size="23" text-anchor="middle">sorted, non-overlapping spans</text>
+  <text x="1170" y="565" font-size="30" font-weight="700" text-anchor="middle">counter.Counters</text>
+  <text x="1170" y="605" font-size="23" text-anchor="middle">lines · matched</text>
+  <text x="1170" y="637" font-size="23" text-anchor="middle">hits per pattern</text>
+  <text x="1170" y="669" font-size="23" text-anchor="middle">printed every -stats</text>
+
+  <text x="700" y="783" font-size="30" font-weight="700" text-anchor="middle">stdout</text>
+  <text x="700" y="815" font-size="23" text-anchor="middle">"api.log | ... ERROR ..." in color</text>
+</svg>
