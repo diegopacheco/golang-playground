@@ -1,0 +1,5 @@
+.run/
+bin/
+electron/node_modules/
+electron/out/
+electron/app-config.json
