@@ -1,0 +1,7 @@
+services:
+  jaeger:
+    image: docker.io/jaegertracing/jaeger:latest
+    container_name: otel-fun-jaeger
+    ports:
+      - "${JAEGER_PORT:-16686}:16686"
+      - "${OTLP_PORT:-4318}:4318"

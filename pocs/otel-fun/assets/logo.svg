@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="260" viewBox="0 0 900 260">
+  <defs>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f5a623"/>
+      <stop offset="1" stop-color="#4f9dff"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="260" rx="28" fill="#101522"/>
+  <g transform="translate(150,130)" fill="none" stroke-linecap="round">
+    <circle r="18" fill="#f5a623"/>
+    <path d="M-42 -30 A52 52 0 0 0 -42 30" stroke="#f5a623" stroke-width="10"/>
+    <path d="M42 -30 A52 52 0 0 1 42 30" stroke="#4f9dff" stroke-width="10"/>
+    <path d="M-70 -55 A90 90 0 0 0 -70 55" stroke="#f5a623" stroke-width="10" opacity="0.6"/>
+    <path d="M70 -55 A90 90 0 0 1 70 55" stroke="#4f9dff" stroke-width="10" opacity="0.6"/>
+  </g>
+  <text x="290" y="140" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="96" font-weight="800" fill="url(#glow)">otel-fun</text>
+  <text x="294" y="192" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="26" fill="#7d86a8">traces · metrics · logs · go-chi</text>
+</svg>

@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="880" viewBox="0 0 1400 880">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&amp;display=swap'); text{font-family:'Caveat',cursive;fill:#1e2235}</style>
+    <filter id="wobble"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" seed="11"/><feDisplacementMap in="SourceGraphic" scale="4"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#3b4060"/></marker>
+  </defs>
+  <rect width="1400" height="880" fill="#fdfcf7"/>
+  <text x="700" y="56" font-size="48" font-weight="700" text-anchor="middle">otel-fun architecture</text>
+
+  <g filter="url(#wobble)" stroke="#3b4060" stroke-width="2.5">
+    <rect x="60" y="100" width="340" height="110" rx="16" fill="#fff9c4"/>
+    <rect x="520" y="100" width="340" height="110" rx="16" fill="#fff9c4"/>
+    <rect x="990" y="100" width="370" height="110" rx="16" fill="#f3e5f5"/>
+
+    <rect x="40" y="280" width="910" height="300" rx="18" fill="#e3f2fd"/>
+    <rect x="60" y="340" width="195" height="210" rx="14" fill="#fce4ec"/>
+    <rect x="285" y="340" width="195" height="210" rx="14" fill="#fff3e0"/>
+    <rect x="510" y="340" width="195" height="210" rx="14" fill="#fff3e0"/>
+    <rect x="735" y="340" width="195" height="210" rx="14" fill="#e0f7fa"/>
+
+    <rect x="990" y="280" width="370" height="300" rx="18" fill="#ede7f6"/>
+
+    <rect x="40" y="660" width="720" height="170" rx="18" fill="#e8f5e9"/>
+    <rect x="840" y="660" width="520" height="170" rx="18" fill="#fbe9e7"/>
+  </g>
+
+  <g stroke="#3b4060" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <path d="M160 210 L160 336"/>
+    <path d="M690 210 L690 276"/>
+    <path d="M255 445 L281 445"/>
+    <path d="M480 445 L506 445"/>
+    <path d="M705 445 L731 445"/>
+    <path d="M950 430 L986 430"/>
+    <path d="M1200 580 L1200 656"/>
+    <path d="M1020 580 L1020 615 L620 615 L620 656"/>
+    <path d="M300 580 L300 656"/>
+  </g>
+
+  <text x="230" y="148" font-size="34" font-weight="700" text-anchor="middle">client</text>
+  <text x="230" y="184" font-size="25" text-anchor="middle">scripts/traffic.sh · curl</text>
+  <text x="690" y="148" font-size="34" font-weight="700" text-anchor="middle">internal/config</text>
+  <text x="690" y="184" font-size="25" text-anchor="middle">one Config struct from env</text>
+  <text x="1175" y="148" font-size="34" font-weight="700" text-anchor="middle">scripts</text>
+  <text x="1175" y="184" font-size="25" text-anchor="middle">setup · start-all · status · ui</text>
+
+  <text x="930" y="318" font-size="32" font-weight="700" text-anchor="end">cmd/otel-fun  (go-chi :8083)</text>
+  <text x="157" y="380" font-size="28" font-weight="700" text-anchor="middle">otelhttp</text>
+  <text x="157" y="416" font-size="22" text-anchor="middle">server span</text>
+  <text x="157" y="446" font-size="22" text-anchor="middle">traceparent in</text>
+  <text x="157" y="476" font-size="22" text-anchor="middle">/health skipped</text>
+  <text x="382" y="380" font-size="28" font-weight="700" text-anchor="middle">logx</text>
+  <text x="382" y="416" font-size="22" text-anchor="middle">X-Correlation-Id</text>
+  <text x="382" y="446" font-size="22" text-anchor="middle">echo or generate</text>
+  <text x="382" y="476" font-size="22" text-anchor="middle">slog + trace_id</text>
+  <text x="607" y="380" font-size="28" font-weight="700" text-anchor="middle">httpapi</text>
+  <text x="607" y="416" font-size="22" text-anchor="middle">POST /api/orders</text>
+  <text x="607" y="446" font-size="22" text-anchor="middle">span name = route</text>
+  <text x="607" y="476" font-size="22" text-anchor="middle">201 · 400 · 422</text>
+  <text x="832" y="380" font-size="28" font-weight="700" text-anchor="middle">checkout</text>
+  <text x="832" y="416" font-size="22" text-anchor="middle">child span</text>
+  <text x="832" y="446" font-size="22" text-anchor="middle">counter orders</text>
+  <text x="832" y="476" font-size="22" text-anchor="middle">histogram total</text>
+  <text x="832" y="506" font-size="22" text-anchor="middle">bulk discount</text>
+
+  <text x="1175" y="326" font-size="32" font-weight="700" text-anchor="middle">internal/telemetry</text>
+  <text x="1175" y="370" font-size="24" text-anchor="middle">TracerProvider</text>
+  <text x="1175" y="402" font-size="22" text-anchor="middle">batcher → OTLP HTTP</text>
+  <text x="1175" y="432" font-size="22" text-anchor="middle">batcher → stdout</text>
+  <text x="1175" y="480" font-size="24" text-anchor="middle">MeterProvider</text>
+  <text x="1175" y="512" font-size="22" text-anchor="middle">periodic reader → stdout</text>
+  <text x="1175" y="542" font-size="22" text-anchor="middle">W3C tracecontext + baggage</text>
+
+  <text x="312" y="630" font-size="22">slog JSON logs</text>
+  <text x="820" y="604" font-size="22" text-anchor="middle">stdout exporters</text>
+  <text x="1212" y="630" font-size="22">OTLP :4318</text>
+
+  <text x="400" y="706" font-size="32" font-weight="700" text-anchor="middle">console  (.run/logs/service.log)</text>
+  <text x="400" y="744" font-size="23" text-anchor="middle">span JSON from stdouttrace</text>
+  <text x="400" y="776" font-size="23" text-anchor="middle">counter + histogram from stdoutmetric</text>
+  <text x="400" y="808" font-size="23" text-anchor="middle">request logs with correlation_id and trace_id</text>
+  <text x="1100" y="706" font-size="32" font-weight="700" text-anchor="middle">Jaeger v2  (podman)</text>
+  <text x="1100" y="744" font-size="23" text-anchor="middle">OTLP HTTP receiver :4318</text>
+  <text x="1100" y="776" font-size="23" text-anchor="middle">in-memory trace storage</text>
+  <text x="1100" y="808" font-size="23" text-anchor="middle">UI + api/v3 on :16686</text>
+</svg>
