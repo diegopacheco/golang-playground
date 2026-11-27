@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="880" viewBox="0 0 1400 880">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&amp;display=swap'); text{font-family:'Caveat',cursive;fill:#1e2235}</style>
+    <filter id="wobble"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" seed="7"/><feDisplacementMap in="SourceGraphic" scale="4"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#3b4060"/></marker>
+  </defs>
+  <rect width="1400" height="880" fill="#fdfcf7"/>
+  <text x="700" y="56" font-size="48" font-weight="700" text-anchor="middle">raft-kv architecture</text>
+
+  <g filter="url(#wobble)" stroke="#3b4060" stroke-width="2.5">
+    <rect x="470" y="90" width="460" height="100" rx="16" fill="#fff9c4"/>
+
+    <rect x="40" y="260" width="700" height="580" rx="18" fill="#e3f2fd"/>
+    <rect x="80" y="320" width="620" height="80" rx="14" fill="#fff9c4"/>
+    <rect x="80" y="430" width="620" height="80" rx="14" fill="#fce4ec"/>
+    <rect x="80" y="540" width="620" height="80" rx="14" fill="#fff3e0"/>
+    <rect x="80" y="650" width="290" height="160" rx="14" fill="#e8f5e9"/>
+    <rect x="410" y="650" width="290" height="160" rx="14" fill="#ede7f6"/>
+
+    <rect x="920" y="260" width="440" height="200" rx="18" fill="#e0f7fa"/>
+    <rect x="920" y="540" width="440" height="200" rx="18" fill="#e0f7fa"/>
+  </g>
+
+  <g stroke="#3b4060" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <path d="M640 190 L640 316"/>
+    <path d="M930 140 L1140 140 L1140 256"/>
+    <path d="M390 400 L390 426"/>
+    <path d="M390 510 L390 536"/>
+    <path d="M225 620 L225 646"/>
+    <path d="M555 620 L555 646"/>
+    <path d="M740 380 L916 380"/>
+    <path d="M740 640 L916 640"/>
+  </g>
+
+  <text x="700" y="132" font-size="34" font-weight="700" text-anchor="middle">client · curl</text>
+  <text x="700" y="170" font-size="24" text-anchor="middle">/kv/{key} · /status · /join</text>
+
+  <text x="655" y="238" font-size="24">PUT · GET · DELETE</text>
+  <text x="1155" y="205" font-size="24">write on follower</text>
+  <text x="1155" y="232" font-size="24">→ 307 to leader</text>
+
+  <text x="70" y="300" font-size="30" font-weight="700">node1 · leader · :9101 / :9201</text>
+  <text x="390" y="352" font-size="28" font-weight="700" text-anchor="middle">logx.Middleware</text>
+  <text x="390" y="386" font-size="23" text-anchor="middle">X-Correlation-Id · slog request log</text>
+  <text x="390" y="462" font-size="28" font-weight="700" text-anchor="middle">httpapi · ServeMux</text>
+  <text x="390" y="496" font-size="23" text-anchor="middle">reads served locally · writes need the leader</text>
+  <text x="390" y="572" font-size="28" font-weight="700" text-anchor="middle">node · raft.Raft</text>
+  <text x="390" y="606" font-size="23" text-anchor="middle">Apply · AddVoter · Status · NotifyCh</text>
+  <text x="225" y="690" font-size="28" font-weight="700" text-anchor="middle">fsm.Store</text>
+  <text x="225" y="726" font-size="23" text-anchor="middle">typed Command</text>
+  <text x="225" y="758" font-size="23" text-anchor="middle">Apply · Snapshot · Restore</text>
+  <text x="225" y="790" font-size="23" text-anchor="middle">data + peers maps</text>
+  <text x="555" y="690" font-size="28" font-weight="700" text-anchor="middle">.run/data/node1</text>
+  <text x="555" y="726" font-size="23" text-anchor="middle">raft.db · raft-boltdb v2</text>
+  <text x="555" y="758" font-size="23" text-anchor="middle">log + stable store</text>
+  <text x="555" y="790" font-size="23" text-anchor="middle">file snapshot store</text>
+
+  <text x="828" y="340" font-size="23" text-anchor="middle">raft TCP</text>
+  <text x="828" y="366" font-size="23" text-anchor="middle">AppendEntries</text>
+  <text x="828" y="600" font-size="23" text-anchor="middle">raft TCP</text>
+  <text x="828" y="626" font-size="23" text-anchor="middle">AppendEntries</text>
+
+  <text x="1140" y="300" font-size="30" font-weight="700" text-anchor="middle">node2 · follower</text>
+  <text x="1140" y="340" font-size="24" text-anchor="middle">:9102 http · :9202 raft</text>
+  <text x="1140" y="376" font-size="24" text-anchor="middle">same packages as node1</text>
+  <text x="1140" y="412" font-size="24" text-anchor="middle">applies committed entries</text>
+  <text x="1140" y="580" font-size="30" font-weight="700" text-anchor="middle">node3 · follower</text>
+  <text x="1140" y="620" font-size="24" text-anchor="middle">:9103 http · :9203 raft</text>
+  <text x="1140" y="656" font-size="24" text-anchor="middle">votes in elections</text>
+  <text x="1140" y="692" font-size="24" text-anchor="middle">catches up from log or snapshot</text>
+</svg>
