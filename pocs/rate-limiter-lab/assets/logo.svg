@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="260" viewBox="0 0 900 260">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffd75f"/>
+      <stop offset="1" stop-color="#ff5fd2"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="260" rx="28" fill="#14161f"/>
+  <g transform="translate(60,50)">
+    <path d="M0 150 L170 150" stroke="#5c6077" stroke-width="4"/>
+    <rect x="6" y="40" width="22" height="110" rx="4" fill="#ff5fd2"/>
+    <rect x="36" y="16" width="22" height="134" rx="4" fill="#ff5fd2" opacity=".55"/>
+    <rect x="66" y="96" width="22" height="54" rx="4" fill="#5fd7ff"/>
+    <rect x="96" y="96" width="22" height="54" rx="4" fill="#5fd7ff"/>
+    <rect x="126" y="96" width="22" height="54" rx="4" fill="#5fd7ff"/>
+    <path d="M0 90 L170 90" stroke="#ffd75f" stroke-width="4" stroke-dasharray="10 8"/>
+  </g>
+  <text x="275" y="140" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="96" font-weight="800" fill="url(#g)">ratelab</text>
+  <text x="280" y="192" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="26" fill="#7a7f99">six limiters · one bursty load · go</text>
+</svg>

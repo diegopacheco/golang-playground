@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&amp;display=swap'); text{font-family:'Caveat',cursive;fill:#1e2235}</style>
+    <filter id="wobble"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" seed="7"/><feDisplacementMap in="SourceGraphic" scale="4"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#3b4060"/></marker>
+  </defs>
+  <rect width="1400" height="900" fill="#fdfcf7"/>
+  <text x="700" y="56" font-size="48" font-weight="700" text-anchor="middle">ratelab architecture</text>
+
+  <g filter="url(#wobble)" stroke="#3b4060" stroke-width="2.5">
+    <rect x="80" y="90" width="380" height="110" rx="16" fill="#fff9c4"/>
+    <rect x="530" y="90" width="340" height="110" rx="16" fill="#e3f2fd"/>
+    <rect x="940" y="90" width="380" height="110" rx="16" fill="#e0f7fa"/>
+    <rect x="80" y="290" width="380" height="150" rx="16" fill="#fff3e0"/>
+    <rect x="530" y="290" width="340" height="150" rx="16" fill="#fce4ec"/>
+    <rect x="940" y="290" width="380" height="150" rx="16" fill="#ede7f6"/>
+    <rect x="80" y="530" width="1240" height="230" rx="18" fill="#e8f5e9"/>
+    <rect x="530" y="800" width="340" height="80" rx="16" fill="#fbe9e7"/>
+  </g>
+
+  <g filter="url(#wobble)" stroke="#3b4060" stroke-width="2" fill="#ffffff">
+    <rect x="110" y="610" width="180" height="120" rx="12"/>
+    <rect x="310" y="610" width="180" height="120" rx="12"/>
+    <rect x="510" y="610" width="180" height="120" rx="12"/>
+    <rect x="710" y="610" width="180" height="120" rx="12"/>
+    <rect x="910" y="610" width="180" height="120" rx="12"/>
+    <rect x="1110" y="610" width="180" height="120" rx="12"/>
+  </g>
+
+  <g stroke="#3b4060" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <path d="M460 145 L526 145"/>
+    <path d="M870 145 L936 145"/>
+    <path d="M700 200 L700 286"/>
+    <path d="M460 365 L526 365"/>
+    <path d="M870 365 L936 365"/>
+    <path d="M700 440 L700 526"/>
+    <path d="M700 796 L700 764"/>
+  </g>
+
+  <text x="270" y="136" font-size="32" font-weight="700" text-anchor="middle">Terminal / scripts</text>
+  <text x="270" y="172" font-size="23" text-anchor="middle">-tick · -plain · -capture</text>
+  <text x="700" y="136" font-size="32" font-weight="700" text-anchor="middle">main.go</text>
+  <text x="700" y="172" font-size="23" text-anchor="middle">wire spec, run, print</text>
+  <text x="1130" y="136" font-size="30" font-weight="700" text-anchor="middle">internal/ansihtml</text>
+  <text x="1130" y="172" font-size="23" text-anchor="middle">-capture: ANSI → HTML → PNG</text>
+
+  <text x="270" y="334" font-size="30" font-weight="700" text-anchor="middle">internal/load</text>
+  <text x="270" y="370" font-size="23" text-anchor="middle">phases: steady · quiet · edge burst</text>
+  <text x="270" y="402" font-size="23" text-anchor="middle">overload · cooldown</text>
+  <text x="270" y="430" font-size="21" text-anchor="middle">arrivals spread evenly per tick</text>
+  <text x="700" y="334" font-size="30" font-weight="700" text-anchor="middle">internal/sim</text>
+  <text x="700" y="370" font-size="23" text-anchor="middle">same arrivals for every limiter</text>
+  <text x="700" y="402" font-size="23" text-anchor="middle">Manual clock set per request</text>
+  <text x="700" y="430" font-size="21" text-anchor="middle">per tick · peak per window · delay</text>
+  <text x="1130" y="334" font-size="30" font-weight="700" text-anchor="middle">internal/report</text>
+  <text x="1130" y="370" font-size="23" text-anchor="middle">asciigraph plot per algorithm</text>
+  <text x="1130" y="402" font-size="23" text-anchor="middle">shared y axis, integer rows</text>
+  <text x="1130" y="430" font-size="21" text-anchor="middle">tabwriter summary table</text>
+
+  <text x="700" y="574" font-size="32" font-weight="700" text-anchor="middle">internal/limiter  ·  Limiter interface { Allow() Decision{Allowed, Delay} }</text>
+  <text x="200" y="654" font-size="25" font-weight="700" text-anchor="middle">token bucket</text>
+  <text x="200" y="690" font-size="20" text-anchor="middle">credit in ns</text>
+  <text x="200" y="716" font-size="20" text-anchor="middle">bursts up to cap</text>
+  <text x="400" y="654" font-size="25" font-weight="700" text-anchor="middle">leaky bucket</text>
+  <text x="400" y="690" font-size="20" text-anchor="middle">queue, constant</text>
+  <text x="400" y="716" font-size="20" text-anchor="middle">leak → Delay</text>
+  <text x="600" y="654" font-size="25" font-weight="700" text-anchor="middle">fixed window</text>
+  <text x="600" y="690" font-size="20" text-anchor="middle">count per window</text>
+  <text x="600" y="716" font-size="20" text-anchor="middle">2x at the edge</text>
+  <text x="800" y="654" font-size="25" font-weight="700" text-anchor="middle">sliding log</text>
+  <text x="800" y="690" font-size="20" text-anchor="middle">exact timestamps</text>
+  <text x="800" y="716" font-size="20" text-anchor="middle">O(limit) memory</text>
+  <text x="1000" y="654" font-size="25" font-weight="700" text-anchor="middle">sliding counter</text>
+  <text x="1000" y="690" font-size="20" text-anchor="middle">prev weighted</text>
+  <text x="1000" y="716" font-size="20" text-anchor="middle">+ current count</text>
+  <text x="1200" y="654" font-size="25" font-weight="700" text-anchor="middle">gcra</text>
+  <text x="1200" y="690" font-size="20" text-anchor="middle">one TAT timestamp</text>
+  <text x="1200" y="716" font-size="20" text-anchor="middle">= token bucket</text>
+
+  <text x="700" y="836" font-size="28" font-weight="700" text-anchor="middle">internal/clock</text>
+  <text x="700" y="866" font-size="22" text-anchor="middle">Clock interface · System · Manual</text>
+</svg>
